@@ -25,7 +25,7 @@
         android:text="Finance" />
 
     <Button
-        android:id="@+id/bHollywood"
+        android:id="@+id/bMovies"
         android:layout_width="110dp"
         android:layout_height="100dp"
         android:layout_alignLeft="@+id/bFinance"
@@ -33,14 +33,14 @@
         android:layout_below="@+id/bFinance"
         android:layout_marginTop="18dp"
         android:background="@android:color/darker_gray"
-        android:text="Hollywood" />
+        android:text="Movies" />
 
     <Button
         android:id="@+id/bSports"
         android:layout_width="110dp"
         android:layout_height="100dp"
-        android:layout_alignBaseline="@+id/bHollywood"
-        android:layout_alignBottom="@+id/bHollywood"
+        android:layout_alignBaseline="@+id/bMovies"
+        android:layout_alignBottom="@+id/bMovies"
         android:layout_alignLeft="@+id/bFootball"
         android:background="@android:color/darker_gray"
         android:text="Sports" />

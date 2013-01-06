@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class IntroScreen extends Activity implements OnClickListener {
 
-	Button football, finance, sports, hollywood;
+	Button football, finance, sports, movies;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +23,11 @@ public class IntroScreen extends Activity implements OnClickListener {
 		football = (Button) findViewById(R.id.bFootball);
 		finance = (Button) findViewById(R.id.bFinance);
 		sports = (Button) findViewById(R.id.bSports);
-		hollywood = (Button) findViewById(R.id.bHollywood);
+		movies= (Button) findViewById(R.id.bMovies);
 		football.setOnClickListener(this);
 		finance.setOnClickListener(this);
 		sports.setOnClickListener(this);
-		hollywood.setOnClickListener(this);
+		movies.setOnClickListener(this);
 	}
 
 	@Override
@@ -45,9 +45,15 @@ public class IntroScreen extends Activity implements OnClickListener {
 
 			break;
 		case R.id.bSports:
+			selection = new Intent("com.fractionlabs.newzbuzz.SPORTS");
+			startActivity(selection);
+
 
 			break;
-		case R.id.bHollywood:
+		case R.id.bMovies:
+			selection = new Intent("com.fractionlabs.newzbuzz.MOVIES");
+			startActivity(selection);
+
 
 			break;
 
