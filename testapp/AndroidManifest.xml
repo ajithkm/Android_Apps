@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fracionlabs.testapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="9" />
+
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.fracionlabs.testapp.Splash"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.fractionlabs.testapp.MAINACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.Menu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.fractionlabs.testapp.MENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.AboutUs"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="com.fractionlabs.testapp.ABOUT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.Prefs"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.fractionlabs.testapp.PREFS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.SQLView"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.fractionlabs.testapp.SQLVIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.TextPlay"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.Email"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.Camera"
+            android:label="Camera Application"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.Data"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.OpenedData"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.Gfx"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.GfxSurface"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.Sound"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.Slider"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.Tabs"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.Browser"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.Flipper"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.Sharedprefs"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.Externaldata"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.fracionlabs.testapp.SQLiteExample"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+
+</manifest>

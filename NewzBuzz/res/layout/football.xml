@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TabHost
+        android:id="@+id/thFootbal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:id="@+id/tabFootballHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="40dp" >
+
+                    <Button
+                        android:id="@+id/bEPL"
+                        android:layout_width="110dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:text="EPL" />
+
+                    <Button
+                        android:id="@+id/bLaLiga"
+                        android:layout_width="110dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:text="La Liga" />
+
+                    <Button
+                        android:id="@+id/bBundesLiga"
+                        android:layout_width="110dp"
+                        android:layout_height="100dp"
+                        android:layout_alignLeft="@+id/bEPL"
+                        android:layout_alignTop="@+id/bSerieA"
+                        android:text="Bundes Liga" />
+
+                    <Button
+                        android:id="@+id/bSerieA"
+                        android:layout_width="110dp"
+                        android:layout_height="100dp"
+                        android:layout_alignLeft="@+id/bLaLiga"
+                        android:layout_below="@+id/bLaLiga"
+                        android:layout_marginTop="27dp"
+                        android:text="Serie A" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabFootballView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <WebView
+                        android:id="@+id/wvFootball"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+    </TabHost>
+
+</LinearLayout>
