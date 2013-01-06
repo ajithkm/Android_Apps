@@ -32,7 +32,7 @@ public final class R {
         public static final int bHistory=0x7f0a0009;
         public static final int bLoad=0x7f0a002c;
         public static final int bRefresh=0x7f0a0008;
-        public static final int bResults=0x7f0a0045;
+        public static final int bResults=0x7f0a0044;
         public static final int bReturn=0x7f0a0029;
         public static final int bSA=0x7f0a001d;
         public static final int bSAFR=0x7f0a001e;
@@ -57,7 +57,7 @@ public final class R {
         public static final int etIntro=0x7f0a000c;
         public static final int etName=0x7f0a000d;
         public static final int etOutro=0x7f0a0010;
-        public static final int etResults=0x7f0a0044;
+        public static final int etResults=0x7f0a0043;
         public static final int etSQLHotness=0x7f0a0037;
         public static final int etSQLName=0x7f0a0035;
         public static final int etSQLinfo=0x7f0a003a;
@@ -68,9 +68,9 @@ public final class R {
         public static final int etURl=0x7f0a0004;
         public static final int handle=0x7f0a0033;
         public static final int ibTakePic=0x7f0a0021;
-        public static final int itaboutUs=0x7f0a0048;
-        public static final int itexit=0x7f0a004a;
-        public static final int itpref=0x7f0a0049;
+        public static final int itaboutUs=0x7f0a0047;
+        public static final int itexit=0x7f0a0049;
+        public static final int itpref=0x7f0a0048;
         public static final int ivReturnedPic=0x7f0a0020;
         public static final int rAll=0x7f0a0027;
         public static final int rMe=0x7f0a0025;
@@ -82,7 +82,7 @@ public final class R {
         public static final int tab2=0x7f0a0040;
         public static final int tab3=0x7f0a0041;
         public static final int tabhost=0x7f0a003b;
-        public static final int tbPassword=0x7f0a0046;
+        public static final int tbPassword=0x7f0a0045;
         public static final int textView1=0x7f0a0000;
         public static final int textView2=0x7f0a0036;
         public static final int tvCanRead=0x7f0a0014;
@@ -91,13 +91,12 @@ public final class R {
         public static final int tvDisplay=0x7f0a0001;
         public static final int tvGot=0x7f0a001f;
         public static final int tvQuestion=0x7f0a0023;
-        public static final int tvResults=0x7f0a0047;
+        public static final int tvResults=0x7f0a0046;
         public static final int tvSavesAs=0x7f0a0016;
         public static final int tvShowResults=0x7f0a003f;
         public static final int tvTest=0x7f0a0028;
         public static final int viewFlipper1=0x7f0a001a;
         public static final int wbBrowser=0x7f0a000a;
-        public static final int webView1=0x7f0a0043;
     }
     public static final class layout {
         public static final int about=0x7f030000;

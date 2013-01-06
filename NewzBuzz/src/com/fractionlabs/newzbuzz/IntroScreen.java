@@ -40,6 +40,8 @@ public class IntroScreen extends Activity implements OnClickListener {
 
 			break;
 		case R.id.bFinance:
+			selection = new Intent("com.fractionlabs.newzbuzz.FINANCE");
+			startActivity(selection);
 
 			break;
 		case R.id.bSports:

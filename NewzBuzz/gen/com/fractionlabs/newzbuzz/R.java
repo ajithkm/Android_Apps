@@ -11,31 +11,43 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int finance=0x7f020000;
-        public static final int football=0x7f020001;
-        public static final int hollywood=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int sports=0x7f020004;
+        public static final int bloomberg=0x7f020000;
+        public static final int bundesliga=0x7f020001;
+        public static final int cnnmoney=0x7f020002;
+        public static final int epl=0x7f020003;
+        public static final int forbes=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
+        public static final int laliga=0x7f020006;
+        public static final int seriea=0x7f020007;
+        public static final int wallstreeet=0x7f020008;
     }
     public static final class id {
-        public static final int bBundesLiga=0x7f070004;
-        public static final int bEPL=0x7f070002;
-        public static final int bFinance=0x7f07000a;
-        public static final int bFootball=0x7f070009;
-        public static final int bHollywood=0x7f07000b;
-        public static final int bLaLiga=0x7f070003;
-        public static final int bSerieA=0x7f070005;
-        public static final int bSports=0x7f07000c;
-        public static final int menu_settings=0x7f07000d;
-        public static final int tab3=0x7f070008;
-        public static final int tabFootballHome=0x7f070001;
-        public static final int tabFootballView=0x7f070006;
-        public static final int thFootbal=0x7f070000;
-        public static final int wvFootball=0x7f070007;
+        public static final int bFinance=0x7f070011;
+        public static final int bFootball=0x7f070010;
+        public static final int bHollywood=0x7f070012;
+        public static final int bSports=0x7f070013;
+        public static final int ivBloomberg=0x7f070004;
+        public static final int ivBundesliga=0x7f07000c;
+        public static final int ivCnnMoney=0x7f070003;
+        public static final int ivEPL=0x7f07000a;
+        public static final int ivForbes=0x7f070002;
+        public static final int ivLaliga=0x7f07000d;
+        public static final int ivSerieA=0x7f07000b;
+        public static final int ivWSJ=0x7f070005;
+        public static final int menu_settings=0x7f070014;
+        public static final int tabFinanceView=0x7f070006;
+        public static final int tabFinancelHome=0x7f070001;
+        public static final int tabFootballHome=0x7f070009;
+        public static final int tabFootballView=0x7f07000e;
+        public static final int thFinance=0x7f070000;
+        public static final int thFootball=0x7f070008;
+        public static final int wvFinance=0x7f070007;
+        public static final int wvFootball=0x7f07000f;
     }
     public static final class layout {
-        public static final int football=0x7f030000;
-        public static final int introscreen=0x7f030001;
+        public static final int finance=0x7f030000;
+        public static final int football=0x7f030001;
+        public static final int introscreen=0x7f030002;
     }
     public static final class menu {
         public static final int introscreen=0x7f060000;

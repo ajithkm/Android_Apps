@@ -6,7 +6,7 @@
     android:orientation="vertical" >
 
     <TabHost
-        android:id="@+id/thFootball"
+        android:id="@+id/thFinance"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
@@ -28,56 +28,56 @@
                 android:layout_height="match_parent" >
 
                 <RelativeLayout
-                    android:id="@+id/tabFootballHome"
+                    android:id="@+id/tabFinancelHome"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:padding="50dp" >
 
                     <ImageView
-                        android:id="@+id/ivEPL"
+                        android:id="@+id/ivForbes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:clickable="true"
-                        android:src="@drawable/epl" />
+                        android:src="@drawable/forbes" />
 
                     <ImageView
-                        android:id="@+id/ivSerieA"
+                        android:id="@+id/ivCnnMoney"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentLeft="true"
                         android:clickable="true"
-                        android:src="@drawable/seriea" />
+                        android:src="@drawable/cnnmoney" />
 
                     <ImageView
-                        android:id="@+id/ivBundesliga"
+                        android:id="@+id/ivBloomberg"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentRight="true"
                         android:clickable="true"
-                        android:src="@drawable/bundesliga" />
+                        android:src="@drawable/bloomberg" />
 
                     <ImageView
-                        android:id="@+id/ivLaliga"
+                        android:id="@+id/ivWSJ"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
                         android:clickable="true"
-                        android:src="@drawable/laliga" />
+                        android:src="@drawable/wallstreeet" />
                 </RelativeLayout>
 
                 <LinearLayout
-                    android:id="@+id/tabFootballView"
+                    android:id="@+id/tabFinanceView"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:orientation="horizontal" >
 
                     <WebView
-                        android:id="@+id/wvFootball"
+                        android:id="@+id/wvFinance"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent" />
                 </LinearLayout>

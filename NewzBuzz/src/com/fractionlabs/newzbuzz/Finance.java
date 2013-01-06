@@ -9,16 +9,16 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
-public class Football extends Activity implements OnClickListener {
+public class Finance extends Activity implements OnClickListener {
 	TabHost th;
-	ImageView epl, laLiga, serieA, bundesLiga;
-	WebView football;
+	ImageView forbes, cnn, bloomberg, wsj;
+	WebView finance;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.football);
+		setContentView(R.layout.finance);
 		initialize_ui();
 		initialize_tabs();
 		initialize_webview();
@@ -26,74 +26,74 @@ public class Football extends Activity implements OnClickListener {
 	}
 
 	private void initialize_webview() {
-		football.setWebViewClient(new OurClient());
-		football.getSettings().setJavaScriptEnabled(true);
-		football.getSettings().setLoadsImagesAutomatically(true);
-		football.getSettings().setLoadWithOverviewMode(true);
-		football.getSettings().setUseWideViewPort(true);
+		finance.setWebViewClient(new OurClient());
+		finance.getSettings().setJavaScriptEnabled(true);
+		finance.getSettings().setLoadsImagesAutomatically(true);
+		finance.getSettings().setLoadWithOverviewMode(true);
+		finance.getSettings().setUseWideViewPort(true);
 
 	}
 
 	private void initialize_tabs() {
-		th = (TabHost) findViewById(R.id.thFootball);
+		th = (TabHost) findViewById(R.id.thFinance);
 		th.setup();
 		TabSpec specs = th.newTabSpec("tag1");
-		specs.setContent(R.id.tabFootballHome);
+		specs.setContent(R.id.tabFinancelHome);
 		specs.setIndicator("Home");
 
 		th.addTab(specs);
 		specs = th.newTabSpec("tag2");
-		specs.setContent(R.id.tabFootballView);
+		specs.setContent(R.id.tabFinanceView);
 		specs.setIndicator("View");
 		th.addTab(specs);
 
 	}
 
 	private void initialize_ui() {
-		epl = (ImageView) findViewById(R.id.ivEPL);
-		laLiga = (ImageView) findViewById(R.id.ivLaliga);
-		serieA = (ImageView) findViewById(R.id.ivSerieA);
-		bundesLiga = (ImageView) findViewById(R.id.ivBundesliga);
-		epl.setOnClickListener(this);
-		laLiga.setOnClickListener(this);
-		serieA.setOnClickListener(this);
-		bundesLiga.setOnClickListener(this);
-		football = (WebView) findViewById(R.id.wvFootball);
+		forbes = (ImageView) findViewById(R.id.ivForbes);
+		cnn = (ImageView) findViewById(R.id.ivCnnMoney);
+		bloomberg = (ImageView) findViewById(R.id.ivBloomberg);
+		wsj = (ImageView) findViewById(R.id.ivWSJ);
+		forbes.setOnClickListener(this);
+		cnn.setOnClickListener(this);
+		bloomberg.setOnClickListener(this);
+		wsj.setOnClickListener(this);
+		finance = (WebView) findViewById(R.id.wvFinance);
 
 	}
 
 	@Override
 	public void onClick(View arg0) {
 		switch (arg0.getId()) {
-		case R.id.ivEPL:
+		case R.id.ivForbes:
 			try {
-				football.loadUrl("http://www.premierleague.com/en-gb.html");
+				finance.loadUrl("http://www.forbes.com/");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 			th.setCurrentTab(1);
 			break;
 
-		case R.id.ivLaliga:
+		case R.id.ivCnnMoney:
 			try {
-				football.loadUrl("http://www.soccer-spain.com/index.php");
+				finance.loadUrl("http://money.cnn.com/");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 			th.setCurrentTab(1);
 			break;
 
-		case R.id.ivBundesliga:
+		case R.id.ivBloomberg:
 			try {
-				football.loadUrl("http://www.bundesliga.com/en/");
+				finance.loadUrl("http://www.bloomberg.com/");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 			th.setCurrentTab(1);
 			break;
-		case R.id.ivSerieA:
+		case R.id.ivWSJ:
 			try {
-				football.loadUrl("http://www.football-italia.net/");
+				finance.loadUrl("http://online.wsj.com/home-page");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

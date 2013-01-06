@@ -2,15 +2,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
     android:padding="45dp"
     tools:context=".IntroScreen" >
 
     <Button
         android:id="@+id/bFootball"
-        android:layout_width="110dp"
-        android:layout_height="100dp"
+        android:layout_width="110sp"
+        android:layout_height="100sp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:background="@android:color/darker_gray"
         android:text="Football" />
 
     <Button
@@ -19,6 +21,7 @@
         android:layout_height="100dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
+        android:background="@android:color/darker_gray"
         android:text="Finance" />
 
     <Button
@@ -29,14 +32,17 @@
         android:layout_alignRight="@+id/bFinance"
         android:layout_below="@+id/bFinance"
         android:layout_marginTop="18dp"
+        android:background="@android:color/darker_gray"
         android:text="Hollywood" />
 
     <Button
         android:id="@+id/bSports"
         android:layout_width="110dp"
         android:layout_height="100dp"
+        android:layout_alignBaseline="@+id/bHollywood"
+        android:layout_alignBottom="@+id/bHollywood"
         android:layout_alignLeft="@+id/bFootball"
-        android:layout_alignTop="@+id/bHollywood"
+        android:background="@android:color/darker_gray"
         android:text="Sports" />
 
 </RelativeLayout>
