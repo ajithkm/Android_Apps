@@ -7,10 +7,11 @@ import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class IntroScreen extends Activity implements OnClickListener {
 
-	Button football, finance, sports, movies;
+	ImageButton football, finance, sports, movies;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +21,10 @@ public class IntroScreen extends Activity implements OnClickListener {
 	}
 
 	private void initialize_ui() {
-		football = (Button) findViewById(R.id.bFootball);
-		finance = (Button) findViewById(R.id.bFinance);
-		sports = (Button) findViewById(R.id.bSports);
-		movies= (Button) findViewById(R.id.bMovies);
+		football = (ImageButton) findViewById(R.id.ibFootball);
+		finance = (ImageButton) findViewById(R.id.ibFinance);
+		sports = (ImageButton) findViewById(R.id.ibSports);
+		movies = (ImageButton) findViewById(R.id.ibMovies);
 		football.setOnClickListener(this);
 		finance.setOnClickListener(this);
 		sports.setOnClickListener(this);
@@ -34,26 +35,24 @@ public class IntroScreen extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		Intent selection;
 		switch (v.getId()) {
-		case R.id.bFootball:
+		case R.id.ibFootball:
 			selection = new Intent("com.fractionlabs.newzbuzz.FOOTBALL");
 			startActivity(selection);
 
 			break;
-		case R.id.bFinance:
+		case R.id.ibFinance:
 			selection = new Intent("com.fractionlabs.newzbuzz.FINANCE");
 			startActivity(selection);
 
 			break;
-		case R.id.bSports:
+		case R.id.ibSports:
 			selection = new Intent("com.fractionlabs.newzbuzz.SPORTS");
 			startActivity(selection);
 
-
 			break;
-		case R.id.bMovies:
+		case R.id.ibMovies:
 			selection = new Intent("com.fractionlabs.newzbuzz.MOVIES");
 			startActivity(selection);
-
 
 			break;
 

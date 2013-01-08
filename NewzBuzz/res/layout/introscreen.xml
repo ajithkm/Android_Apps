@@ -1,48 +1,127 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:background="@drawable/bg"
-     android:padding="45dp"
-    tools:context=".IntroScreen" >
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:weightSum="100" >
 
-    <Button
-        android:id="@+id/bFootball"
-        android:layout_width="110sp"
-        android:layout_height="100sp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@android:color/darker_gray"
-        android:text="Football" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="20"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="2" >
 
-    <Button
-        android:id="@+id/bFinance"
-        android:layout_width="110dp"
-        android:layout_height="100dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:background="@android:color/darker_gray"
-        android:text="Finance" />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
 
-    <Button
-        android:id="@+id/bMovies"
-        android:layout_width="110dp"
-        android:layout_height="100dp"
-        android:layout_alignLeft="@+id/bFinance"
-        android:layout_alignRight="@+id/bFinance"
-        android:layout_below="@+id/bFinance"
-        android:layout_marginTop="18dp"
-        android:background="@android:color/darker_gray"
-        android:text="Movies" />
+            <ImageButton
+                android:id="@+id/ibFootball"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/football" />
+        </FrameLayout>
 
-    <Button
-        android:id="@+id/bSports"
-        android:layout_width="110dp"
-        android:layout_height="100dp"
-        android:layout_alignBaseline="@+id/bMovies"
-        android:layout_alignBottom="@+id/bMovies"
-        android:layout_alignLeft="@+id/bFootball"
-        android:background="@android:color/darker_gray"
-        android:text="Sports" />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
 
-</RelativeLayout>
+            <ImageButton
+                android:id="@+id/ibFinance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/finance" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="30"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Football"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Finance"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="20"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/ibMovies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/movies" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/ibSports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sports" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="30"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Movies"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Sports"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>
