@@ -1,9 +1,11 @@
 package com.fractionlabs.newzbuzz;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TabHost;
@@ -31,6 +33,28 @@ public class Football extends Activity implements OnClickListener {
 		football.getSettings().setLoadsImagesAutomatically(true);
 		football.getSettings().setLoadWithOverviewMode(true);
 		football.getSettings().setUseWideViewPort(true);
+		football.getSettings().setBuiltInZoomControls(true);
+		final Activity activity = this;
+
+		final ProgressDialog progressDialog = new ProgressDialog(activity);
+		// progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+		progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+
+		progressDialog.setCancelable(false);
+
+		football.setWebChromeClient(new WebChromeClient() {
+			public void onProgressChanged(WebView view, int progress) {
+				progressDialog.show();
+
+				progressDialog.setProgress(0);
+				activity.setProgress(progress * 1000);
+
+				progressDialog.incrementProgressBy(progress);
+
+				if (progress >= 60 && progressDialog.isShowing())
+					progressDialog.dismiss();
+			}
+		});
 
 	}
 
@@ -64,6 +88,7 @@ public class Football extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View arg0) {
+		football.clearView();
 		switch (arg0.getId()) {
 		case R.id.ivEPL:
 			try {

@@ -1,13 +1,17 @@
 package com.fractionlabs.newzbuzz;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
+import android.widget.Toast;
 
 public class Sports extends Activity implements OnClickListener {
 	TabHost th;
@@ -31,6 +35,37 @@ public class Sports extends Activity implements OnClickListener {
 		sports.getSettings().setLoadsImagesAutomatically(true);
 		sports.getSettings().setLoadWithOverviewMode(true);
 		sports.getSettings().setUseWideViewPort(true);
+		sports.getSettings().setBuiltInZoomControls(true);
+		final Activity activity = this;
+
+		final ProgressDialog progressDialog = new ProgressDialog(activity);
+		// progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+		progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+
+		progressDialog.setCancelable(false);
+
+		sports.setWebChromeClient(new WebChromeClient() {
+			public void onProgressChanged(WebView view, int progress) {
+				progressDialog.show();
+
+				progressDialog.setProgress(0);
+				activity.setProgress(progress * 1000);
+
+				progressDialog.incrementProgressBy(progress);
+
+				if (progress >= 60 && progressDialog.isShowing())
+					progressDialog.dismiss();
+			}
+		});
+
+	/*	sports.setWebViewClient(new WebViewClient() {
+			public void onReceivedError(WebView view, int errorCode,
+					String description, String failingUrl) {
+				Toast.makeText(activity, "Oh no! " + description,
+						Toast.LENGTH_SHORT).show();
+
+			}
+		});*/
 
 	}
 
@@ -64,6 +99,7 @@ public class Sports extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View arg0) {
+		sports.clearView();
 		switch (arg0.getId()) {
 		case R.id.ivESPN:
 			try {
