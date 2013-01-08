@@ -31,6 +31,8 @@ public class Finance extends Activity implements OnClickListener {
 		finance.getSettings().setLoadsImagesAutomatically(true);
 		finance.getSettings().setLoadWithOverviewMode(true);
 		finance.getSettings().setUseWideViewPort(true);
+		finance.getSettings().setBuiltInZoomControls(true);
+		
 
 	}
 

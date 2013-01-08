@@ -25,7 +25,7 @@
     </TableLayout>
 
     <TextView
-        android:id="@+id/etSQLinfo"
+        android:id="@+id/tvSQLinfo"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:text="get info from database" />
