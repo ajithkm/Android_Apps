@@ -58,7 +58,7 @@ public class Sports extends Activity implements OnClickListener {
 			}
 		});
 
-	/*	sports.setWebViewClient(new WebViewClient() {
+/*		sports.setWebViewClient(new WebViewClient() {
 			public void onReceivedError(WebView view, int errorCode,
 					String description, String failingUrl) {
 				Toast.makeText(activity, "Oh no! " + description,
@@ -66,6 +66,7 @@ public class Sports extends Activity implements OnClickListener {
 
 			}
 		});*/
+		
 
 	}
 

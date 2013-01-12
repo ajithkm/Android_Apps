@@ -1,88 +1,127 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:background="@drawable/bg"
-     android:orientation="vertical" >
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:weightSum="100" >
 
-    <TabHost
-        android:id="@+id/thFootball"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="20"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="2" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
 
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/ibEpl"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@android:color/background_light" >
-            </TabWidget>
+                android:src="@drawable/epl" />
+        </FrameLayout>
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
 
-                <RelativeLayout
-                    android:id="@+id/tabFootballHome"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:padding="50dp" >
+            <ImageButton
+                android:id="@+id/ibLaLiga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/laliga" />
+        </FrameLayout>
+    </LinearLayout>
 
-                    <ImageView
-                        android:id="@+id/ivEPL"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:clickable="true"
-                        android:src="@drawable/epl" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="30"
+        android:orientation="horizontal"
+        android:weightSum="2" >
 
-                    <ImageView
-                        android:id="@+id/ivSerieA"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentLeft="true"
-                        android:clickable="true"
-                        android:src="@drawable/seriea" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="EPL"
+            android:textSize="18sp" />
 
-                    <ImageView
-                        android:id="@+id/ivBundesliga"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"
-                        android:clickable="true"
-                        android:src="@drawable/bundesliga" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="La Liga"
+            android:textSize="18sp" />
+    </LinearLayout>
 
-                    <ImageView
-                        android:id="@+id/ivLaliga"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentTop="true"
-                        android:clickable="true"
-                        android:src="@drawable/laliga" />
-                </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="20"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="2" >
 
-                <LinearLayout
-                    android:id="@+id/tabFootballView"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:orientation="horizontal" >
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
 
-                    <WebView
-                        android:id="@+id/wvFootball"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent" />
-                </LinearLayout>
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
+            <ImageButton
+                android:id="@+id/ibBundesliga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bundesliga" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/ibSerie A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/seriea" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="30"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Bundesliga"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Serie A"
+            android:textSize="18sp" />
+    </LinearLayout>
 
 </LinearLayout>

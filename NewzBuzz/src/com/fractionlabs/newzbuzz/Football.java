@@ -7,13 +7,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
 public class Football extends Activity implements OnClickListener {
 	TabHost th;
-	ImageView epl, laLiga, serieA, bundesLiga;
+	ImageButton epl, laLiga, serieA, bundesLiga;
 	WebView football;
 
 	@Override

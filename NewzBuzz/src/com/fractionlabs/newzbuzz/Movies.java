@@ -10,6 +10,7 @@ import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
+import android.widget.Toast;
 
 public class Movies extends Activity implements OnClickListener {
 	TabHost th;
@@ -93,8 +94,13 @@ public class Movies extends Activity implements OnClickListener {
 		case R.id.ivImdb:
 			try {
 				movies.loadUrl("http://www.imdb.com/");
+				
 			} catch (Exception e) {
 				e.printStackTrace();
+				Toast t = new Toast(this);
+				t.setText("cannot load url");
+				t.setDuration(Toast.LENGTH_LONG);
+				t.show();
 			}
 			th.setCurrentTab(1);
 			break;
@@ -111,6 +117,7 @@ public class Movies extends Activity implements OnClickListener {
 		case R.id.ivTmz:
 			try {
 				movies.loadUrl("http://www.tmz.com/");
+			
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
