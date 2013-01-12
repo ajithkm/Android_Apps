@@ -27,48 +27,82 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
 
-                <RelativeLayout
+                <LinearLayout
                     android:id="@+id/tabSportsHome"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:padding="50dp" >
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/bg"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:weightSum="100" >
 
-                    <ImageView
-                        android:id="@+id/ivESPN"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:clickable="true"
-                        android:src="@drawable/espn" />
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="50"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="2" >
 
-                    <ImageView
-                        android:id="@+id/ivNbcSports"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentLeft="true"
-                        android:clickable="true"
-                        android:src="@drawable/nbcsports" />
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
 
-                    <ImageView
-                        android:id="@+id/ivSportsIllustrated"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"
-                        android:clickable="true"
-                        android:src="@drawable/sportsillustrated" />
+                            <ImageButton
+                                android:id="@+id/ibEspn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/espn" />
+                        </FrameLayout>
 
-                    <ImageView
-                        android:id="@+id/ivCbsSports"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentTop="true"
-                        android:clickable="true"
-                        android:src="@drawable/cbssports" />
-                </RelativeLayout>
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <ImageButton
+                                android:id="@+id/ibNbcSports"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/nbcsports" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="50"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="2" >
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <ImageButton
+                                android:id="@+id/ibCbsSports"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/cbssports" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <ImageButton
+                                android:id="@+id/ibSportsIllustrated"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/sportsillustrated" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/tabSportsView"

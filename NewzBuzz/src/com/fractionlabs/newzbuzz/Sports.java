@@ -8,14 +8,14 @@ import android.view.View.OnClickListener;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ImageView;
+import android.widget.ImageButton;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.Toast;
 
 public class Sports extends Activity implements OnClickListener {
 	TabHost th;
-	ImageView espn, nbc, si, cbs;
+	ImageButton espn, nbc, si, cbs;
 	WebView sports;
 
 	@Override
@@ -86,10 +86,10 @@ public class Sports extends Activity implements OnClickListener {
 	}
 
 	private void initialize_ui() {
-		espn = (ImageView) findViewById(R.id.ivESPN);
-		nbc = (ImageView) findViewById(R.id.ivNbcSports);
-		si = (ImageView) findViewById(R.id.ivSportsIllustrated);
-		cbs = (ImageView) findViewById(R.id.ivCbsSports);
+		espn = (ImageButton) findViewById(R.id.ibEspn);
+		nbc = (ImageButton) findViewById(R.id.ibNbcSports);
+		si = (ImageButton) findViewById(R.id.ibSportsIllustrated);
+		cbs = (ImageButton) findViewById(R.id.ibCbsSports);
 		espn.setOnClickListener(this);
 		nbc.setOnClickListener(this);
 		si.setOnClickListener(this);
@@ -102,7 +102,7 @@ public class Sports extends Activity implements OnClickListener {
 	public void onClick(View arg0) {
 		sports.clearView();
 		switch (arg0.getId()) {
-		case R.id.ivESPN:
+		case R.id.ibEspn:
 			try {
 				sports.loadUrl("http://espn.go.com/");
 			} catch (Exception e) {
@@ -111,7 +111,7 @@ public class Sports extends Activity implements OnClickListener {
 			th.setCurrentTab(1);
 			break;
 
-		case R.id.ivNbcSports:
+		case R.id.ibNbcSports:
 			try {
 				sports.loadUrl("http://nbcsports.msnbc.com/");
 			} catch (Exception e) {
@@ -120,7 +120,7 @@ public class Sports extends Activity implements OnClickListener {
 			th.setCurrentTab(1);
 			break;
 
-		case R.id.ivSportsIllustrated:
+		case R.id.ibSportsIllustrated:
 			try {
 				sports.loadUrl("http://sportsillustrated.cnn.com/");
 			} catch (Exception e) {
@@ -128,7 +128,7 @@ public class Sports extends Activity implements OnClickListener {
 			}
 			th.setCurrentTab(1);
 			break;
-		case R.id.ivCbsSports:
+		case R.id.ibCbsSports:
 			try {
 				sports.loadUrl("http://www.cbssports.com/");
 			} catch (Exception e) {

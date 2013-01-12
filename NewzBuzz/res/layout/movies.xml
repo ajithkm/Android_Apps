@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-     android:orientation="vertical" >
+    android:orientation="vertical" >
 
     <TabHost
         android:id="@+id/thMovies"
@@ -27,48 +27,82 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
 
-                <RelativeLayout
+                <LinearLayout
                     android:id="@+id/tabMoviesHome"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:padding="50dp" >
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/bg"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:weightSum="100" >
 
-                    <ImageView
-                        android:id="@+id/ivImdb"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:clickable="true"
-                        android:src="@drawable/imdb" />
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="50"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="2" >
 
-                    <ImageView
-                        android:id="@+id/ivRottentomates"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentLeft="true"
-                        android:clickable="true"
-                        android:src="@drawable/rottentomatoes" />
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
 
-                    <ImageView
-                        android:id="@+id/ivTmz"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"
-                        android:clickable="true"
-                        android:src="@drawable/tmz" />
+                            <ImageButton
+                                android:id="@+id/ibImdb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/imdb" />
+                        </FrameLayout>
 
-                    <ImageView
-                        android:id="@+id/ivBollywoodHungama"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentTop="true"
-                        android:clickable="true"
-                        android:src="@drawable/bollywoodhungama" />
-                </RelativeLayout>
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <ImageButton
+                                android:id="@+id/ibTmz"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/tmz" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="50"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="2" >
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <ImageButton
+                                android:id="@+id/ibRottenTomatoes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/rottentomatoes" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <ImageButton
+                                android:id="@+id/ibBollywoodHungama"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/bollywoodhungama" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/tabMoviesView"

@@ -9,6 +9,7 @@ import android.view.Window;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
@@ -16,7 +17,7 @@ import android.widget.Toast;
 
 public class Finance extends Activity implements OnClickListener {
 	TabHost th;
-	ImageView forbes, cnn, bloomberg, wsj;
+	ImageButton forbes, cnn, bloomberg, wsj;
 	WebView finance;
 
 	@Override
@@ -77,10 +78,10 @@ public class Finance extends Activity implements OnClickListener {
 	}
 
 	private void initialize_ui() {
-		forbes = (ImageView) findViewById(R.id.ivForbes);
-		cnn = (ImageView) findViewById(R.id.ivCnnMoney);
-		bloomberg = (ImageView) findViewById(R.id.ivBloomberg);
-		wsj = (ImageView) findViewById(R.id.ivWSJ);
+		forbes = (ImageButton) findViewById(R.id.ibForbes);
+		cnn = (ImageButton) findViewById(R.id.ibCnnMoney);
+		bloomberg = (ImageButton) findViewById(R.id.ibBloomberg);
+		wsj = (ImageButton) findViewById(R.id.ibWSJ);
 		forbes.setOnClickListener(this);
 		cnn.setOnClickListener(this);
 		bloomberg.setOnClickListener(this);
@@ -93,7 +94,7 @@ public class Finance extends Activity implements OnClickListener {
 	public void onClick(View arg0) {
 		finance.clearView();
 		switch (arg0.getId()) {
-		case R.id.ivForbes:
+		case R.id.ibForbes:
 			th.setCurrentTab(1);
 
 			try {
@@ -105,7 +106,7 @@ public class Finance extends Activity implements OnClickListener {
 
 			break;
 
-		case R.id.ivCnnMoney:
+		case R.id.ibCnnMoney:
 			try {
 				finance.loadUrl("http://money.cnn.com/");
 			} catch (Exception e) {
@@ -114,7 +115,7 @@ public class Finance extends Activity implements OnClickListener {
 			th.setCurrentTab(1);
 			break;
 
-		case R.id.ivBloomberg:
+		case R.id.ibBloomberg:
 			try {
 				finance.loadUrl("http://www.bloomberg.com/");
 			} catch (Exception e) {
@@ -122,7 +123,7 @@ public class Finance extends Activity implements OnClickListener {
 			}
 			th.setCurrentTab(1);
 			break;
-		case R.id.ivWSJ:
+		case R.id.ibWSJ:
 			try {
 				finance.loadUrl("http://online.wsj.com/home-page");
 			} catch (Exception e) {

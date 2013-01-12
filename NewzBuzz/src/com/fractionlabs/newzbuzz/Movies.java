@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
@@ -14,7 +15,7 @@ import android.widget.Toast;
 
 public class Movies extends Activity implements OnClickListener {
 	TabHost th;
-	ImageView imdb, rottentomatoes, tmz, bwdhungama;
+	ImageButton imdb, rottentomatoes, tmz, bwdhungama;
 	WebView movies;
 
 	@Override
@@ -75,10 +76,10 @@ public class Movies extends Activity implements OnClickListener {
 	}
 
 	private void initialize_ui() {
-		imdb = (ImageView) findViewById(R.id.ivImdb);
-		rottentomatoes = (ImageView) findViewById(R.id.ivRottentomates);
-		tmz = (ImageView) findViewById(R.id.ivTmz);
-		bwdhungama = (ImageView) findViewById(R.id.ivBollywoodHungama);
+		imdb = (ImageButton) findViewById(R.id.ibImdb);
+		rottentomatoes = (ImageButton) findViewById(R.id.ibRottenTomatoes);
+		tmz = (ImageButton) findViewById(R.id.ibTmz);
+		bwdhungama = (ImageButton) findViewById(R.id.ibBollywoodHungama);
 		imdb.setOnClickListener(this);
 		rottentomatoes.setOnClickListener(this);
 		tmz.setOnClickListener(this);
@@ -91,7 +92,7 @@ public class Movies extends Activity implements OnClickListener {
 	public void onClick(View arg0) {
 		movies.clearView();
 		switch (arg0.getId()) {
-		case R.id.ivImdb:
+		case R.id.ibImdb:
 			try {
 				movies.loadUrl("http://www.imdb.com/");
 				
@@ -105,7 +106,7 @@ public class Movies extends Activity implements OnClickListener {
 			th.setCurrentTab(1);
 			break;
 
-		case R.id.ivRottentomates:
+		case R.id.ibRottenTomatoes:
 			try {
 				movies.loadUrl("http://www.rottentomatoes.com");
 			} catch (Exception e) {
@@ -114,7 +115,7 @@ public class Movies extends Activity implements OnClickListener {
 			th.setCurrentTab(1);
 			break;
 
-		case R.id.ivTmz:
+		case R.id.ibTmz:
 			try {
 				movies.loadUrl("http://www.tmz.com/");
 			
@@ -123,7 +124,7 @@ public class Movies extends Activity implements OnClickListener {
 			}
 			th.setCurrentTab(1);
 			break;
-		case R.id.ivBollywoodHungama:
+		case R.id.ibBollywoodHungama:
 			try {
 				movies.loadUrl("http://www.bollywoodhungama.com/more/news");
 			} catch (Exception e) {

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-     android:orientation="vertical" >
+    android:orientation="vertical" >
 
     <TabHost
         android:id="@+id/thFinance"
@@ -27,48 +27,82 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
 
-                <RelativeLayout
+                <LinearLayout
                     android:id="@+id/tabFinancelHome"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:padding="50dp" >
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/bg"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:weightSum="100" >
 
-                    <ImageView
-                        android:id="@+id/ivForbes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:clickable="true"
-                        android:src="@drawable/forbes" />
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="50"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="2" >
 
-                    <ImageView
-                        android:id="@+id/ivCnnMoney"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentLeft="true"
-                        android:clickable="true"
-                        android:src="@drawable/cnnmoney" />
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
 
-                    <ImageView
-                        android:id="@+id/ivBloomberg"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"
-                        android:clickable="true"
-                        android:src="@drawable/bloomberg" />
+                            <ImageButton
+                                android:id="@+id/ibForbes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/forbes" />
+                        </FrameLayout>
 
-                    <ImageView
-                        android:id="@+id/ivWSJ"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentTop="true"
-                        android:clickable="true"
-                        android:src="@drawable/wallstreeet" />
-                </RelativeLayout>
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <ImageButton
+                                android:id="@+id/ibBloomberg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/bloomberg" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="50"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="2" >
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <ImageButton
+                                android:id="@+id/ibCnnMoney"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/cnnmoney" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <ImageButton
+                                android:id="@+id/ibWSJ"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/wallstreet" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/tabFinanceView"

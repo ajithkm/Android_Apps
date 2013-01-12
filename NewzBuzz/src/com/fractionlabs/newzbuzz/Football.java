@@ -75,10 +75,10 @@ public class Football extends Activity implements OnClickListener {
 	}
 
 	private void initialize_ui() {
-		epl = (ImageView) findViewById(R.id.ivEPL);
-		laLiga = (ImageView) findViewById(R.id.ivLaliga);
-		serieA = (ImageView) findViewById(R.id.ivSerieA);
-		bundesLiga = (ImageView) findViewById(R.id.ivBundesliga);
+		epl = (ImageButton) findViewById(R.id.ibEpl);
+		laLiga = (ImageButton) findViewById(R.id.ibLaLiga);
+		serieA = (ImageButton) findViewById(R.id.ibSerieA);
+		bundesLiga = (ImageButton) findViewById(R.id.ibBundesliga);
 		epl.setOnClickListener(this);
 		laLiga.setOnClickListener(this);
 		serieA.setOnClickListener(this);
@@ -91,7 +91,7 @@ public class Football extends Activity implements OnClickListener {
 	public void onClick(View arg0) {
 		football.clearView();
 		switch (arg0.getId()) {
-		case R.id.ivEPL:
+		case R.id.ibEpl:
 			try {
 				football.loadUrl("http://www.premierleague.com/en-gb.html");
 			} catch (Exception e) {
@@ -100,7 +100,7 @@ public class Football extends Activity implements OnClickListener {
 			th.setCurrentTab(1);
 			break;
 
-		case R.id.ivLaliga:
+		case R.id.ibLaLiga:
 			try {
 				football.loadUrl("http://www.soccer-spain.com/index.php");
 			} catch (Exception e) {
@@ -109,7 +109,7 @@ public class Football extends Activity implements OnClickListener {
 			th.setCurrentTab(1);
 			break;
 
-		case R.id.ivBundesliga:
+		case R.id.ibBundesliga:
 			try {
 				football.loadUrl("http://www.bundesliga.com/en/");
 			} catch (Exception e) {
@@ -117,7 +117,7 @@ public class Football extends Activity implements OnClickListener {
 			}
 			th.setCurrentTab(1);
 			break;
-		case R.id.ivSerieA:
+		case R.id.ibSerieA:
 			try {
 				football.loadUrl("http://www.football-italia.net/");
 			} catch (Exception e) {
