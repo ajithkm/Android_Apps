@@ -7,9 +7,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TabHost;
+import android.widget.Toast;
 import android.widget.TabHost.TabSpec;
 
 public class Football extends Activity implements OnClickListener {
@@ -49,11 +51,21 @@ public class Football extends Activity implements OnClickListener {
 
 				progressDialog.setProgress(0);
 				activity.setProgress(progress * 1000);
-
+				
+				
 				progressDialog.incrementProgressBy(progress);
 
-				if (progress >= 60 && progressDialog.isShowing())
+				if (progress >= 75 && progressDialog.isShowing())
 					progressDialog.dismiss();
+			}
+		});
+		football.setWebViewClient(new WebViewClient() {
+			public void onReceivedError(WebView view, int errorCode,
+					String description, String failingUrl) {
+				football.loadUrl("file:///android_asset/error.html");
+				Toast.makeText(activity, "Oh no! " + description,
+						Toast.LENGTH_SHORT).show();
+
 			}
 		});
 

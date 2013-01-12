@@ -53,19 +53,20 @@ public class Sports extends Activity implements OnClickListener {
 
 				progressDialog.incrementProgressBy(progress);
 
-				if (progress >= 60 && progressDialog.isShowing())
+				if (progress >= 75 && progressDialog.isShowing())
 					progressDialog.dismiss();
 			}
 		});
 
-/*		sports.setWebViewClient(new WebViewClient() {
+	sports.setWebViewClient(new WebViewClient() {
 			public void onReceivedError(WebView view, int errorCode,
 					String description, String failingUrl) {
+				sports.loadUrl("file:///android_asset/error.html");
 				Toast.makeText(activity, "Oh no! " + description,
 						Toast.LENGTH_SHORT).show();
 
 			}
-		});*/
+		});
 		
 
 	}
@@ -130,7 +131,7 @@ public class Sports extends Activity implements OnClickListener {
 			break;
 		case R.id.ibCbsSports:
 			try {
-				sports.loadUrl("http://www.cbssports.com/");
+				sports.loadUrl("http://cbssports.com/");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

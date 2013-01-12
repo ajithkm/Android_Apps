@@ -55,8 +55,17 @@ public class Finance extends Activity implements OnClickListener {
 
 				progressDialog.incrementProgressBy(progress);
 
-				if (progress >= 60 && progressDialog.isShowing())
+				if (progress >= 75 && progressDialog.isShowing())
 					progressDialog.dismiss();
+			}
+		});
+		finance.setWebViewClient(new WebViewClient() {
+			public void onReceivedError(WebView view, int errorCode,
+					String description, String failingUrl) {
+				finance.loadUrl("file:///android_asset/error.html");
+				Toast.makeText(activity, "Oh no! " + description,
+						Toast.LENGTH_SHORT).show();
+
 			}
 		});
 

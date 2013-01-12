@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TabHost;
@@ -53,8 +54,17 @@ public class Movies extends Activity implements OnClickListener {
 
 				progressDialog.incrementProgressBy(progress);
 
-				if (progress >= 60 && progressDialog.isShowing())
+				if (progress >= 75 && progressDialog.isShowing())
 					progressDialog.dismiss();
+			}
+		});
+		movies.setWebViewClient(new WebViewClient() {
+			public void onReceivedError(WebView view, int errorCode,
+					String description, String failingUrl) {
+				movies.loadUrl("file:///android_asset/error.html");
+				Toast.makeText(activity, "Oh no! " + description,
+						Toast.LENGTH_SHORT).show();
+
 			}
 		});
 
