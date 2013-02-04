@@ -58,7 +58,7 @@ public class HotOrNot {
 		ourHelper.close();
 	}
 
-	public long createEntry(String name, String hotness) {
+	public long createEntry(String name, String hotness) throws SQLException {
 		// TODO Auto-generated method stub
 		ContentValues cv = new ContentValues();
 		cv.put(KEY_NAME, name);
@@ -66,7 +66,7 @@ public class HotOrNot {
 		return ourDatabase.insert(DATABASE_TABLE, null, cv);
 	}
 
-	public String getData() {
+	public String getData() throws SQLException {
 		// TODO Auto-generated method stub
 		String[] columns = new String[] { KEY_ROWID, KEY_NAME, KEY_HOTNESS };
 		Cursor c = ourDatabase.query(DATABASE_TABLE, columns, null, null, null,
@@ -84,7 +84,7 @@ public class HotOrNot {
 		return result;
 	}
 
-	public String getName(long l) {
+	public String getName(long l) throws SQLException {
 		// TODO Auto-generated method stub
 		String[] columns = new String[] { KEY_ROWID, KEY_NAME, KEY_HOTNESS };
 
@@ -98,7 +98,7 @@ public class HotOrNot {
 		return null;
 	}
 
-	public String gethotness(long l) {
+	public String gethotness(long l) throws SQLException {
 		// TODO Auto-generated method stub
 		String[] columns = new String[] { KEY_ROWID, KEY_NAME, KEY_HOTNESS };
 
@@ -110,5 +110,22 @@ public class HotOrNot {
 			return hotness;
 		}
 		return null;
+	}
+
+	public void updateEntry(long lrow, String mname, String mhotness)
+			throws SQLException {
+		// TODO Auto-generated method stub
+		ContentValues cvUpdate = new ContentValues();
+		cvUpdate.put(KEY_NAME, mname);
+		cvUpdate.put(KEY_HOTNESS, mhotness);
+		ourDatabase.update(DATABASE_TABLE, cvUpdate, KEY_ROWID + "=" + lrow,
+				null);
+
+	}
+
+	public void deleteEntry(long lrow1) throws SQLException {
+		// TODO Auto-generated method stub
+		ourDatabase.delete(DATABASE_TABLE, KEY_ROWID + "=" + lrow1, null);
+
 	}
 }

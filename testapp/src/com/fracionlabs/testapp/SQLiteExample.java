@@ -83,25 +83,78 @@ public class SQLiteExample extends Activity implements OnClickListener {
 			break;
 
 		case R.id.bgetInfo:
-			String s = sqlRow.getText().toString();
-			;
-			long l = Long.parseLong(s);   
-			HotOrNot hon = new HotOrNot(this);
-			hon.open();
-			String returnedName = hon.getName(l);
-			String returnedHotness = hon.gethotness(l);
-			hon.close();
+			try {
+				String s = sqlRow.getText().toString();
 
-			sqlname.setText(returnedName);
-			sqlHotness.setText(returnedHotness);
+				long l = Long.parseLong(s);
+				HotOrNot hon = new HotOrNot(this);
+				hon.open();
+				String returnedName = hon.getName(l);
+				String returnedHotness = hon.gethotness(l);
+				hon.close();
+
+				sqlname.setText(returnedName);
+				sqlHotness.setText(returnedHotness);
+			} catch (Exception e) {
+				e.printStackTrace();
+				diditWork = false;
+				String error = e.toString();
+				Dialog d = new Dialog(this);
+				d.setTitle("Heck ya..");
+				TextView tv = new TextView(this);
+				tv.setText(error);
+				d.setContentView(tv);
+				d.show();
+			}
 
 			break;
 
 		case R.id.bSQLmodify:
+			try {
+				String srow = sqlRow.getText().toString();
+
+				long lrow = Long.parseLong(srow);
+
+				String mname = sqlname.getText().toString();
+				String mhotness = sqlHotness.getText().toString();
+
+				HotOrNot ex = new HotOrNot(this);
+				ex.open();
+				ex.updateEntry(lrow, mname, mhotness);
+				ex.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+				diditWork = false;
+				String error = e.toString();
+				Dialog d = new Dialog(this);
+				d.setTitle("Heck ya..");
+				TextView tv = new TextView(this);
+				tv.setText(error);
+				d.setContentView(tv);
+				d.show();
+			}
 
 			break;
 
 		case R.id.bSQLdelete:
+			try {
+				String srow1 = sqlRow.getText().toString();
+				long lrow1 = Long.parseLong(srow1);
+				HotOrNot ex1 = new HotOrNot(this);
+				ex1.open();
+				ex1.deleteEntry(lrow1);
+				ex1.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+				diditWork = false;
+				String error = e.toString();
+				Dialog d = new Dialog(this);
+				d.setTitle("Heck ya..");
+				TextView tv = new TextView(this);
+				tv.setText(error);
+				d.setContentView(tv);
+				d.show();
+			}
 			break;
 
 		}
